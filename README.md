@@ -83,16 +83,16 @@ contact-manager-app/
 
 🔐 User Auth Routes
 
-Method	Endpoint	    Description--->
+Method	Endpoint	        Description--->
 POST	/api/users/register	Register user
 POST	/api/users/login	Login user
 GET	/api/users/current	Get current user (protected)
 
 📇 Contact Routes (Protected)
 
-Method	Endpoint	    Description--->
-GET	/api/contacts	    Get all contacts
-POST	/api/contacts	  Create new contact
+Method	Endpoint	        Description--->
+GET	/api/contacts	        Get all contacts
+POST	/api/contacts	      Create new contact
 GET	/api/contacts/:id	Get contact by ID
 PUT	/api/contacts/:id	Update contact
 DELETE	/api/contacts/:id	Delete contact
