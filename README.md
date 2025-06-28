@@ -92,7 +92,7 @@ GET	/api/users/current	Get current user (protected)
 
 Method	Endpoint	        Description--->
 GET	/api/contacts	        Get all contacts
-POST	/api/contacts	      Create new contact
+POST	/api/contacts	        Create new contact
 GET	/api/contacts/:id	Get contact by ID
 PUT	/api/contacts/:id	Update contact
 DELETE	/api/contacts/:id	Delete contact
