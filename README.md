@@ -46,10 +46,10 @@ npm run dev
 # For production build
 npm start
 
+---
+
 📁 Project Structure
-lua
-Copy
-Edit
+
 contact-manager-app/
 │
 ├── controllers/
@@ -76,46 +76,43 @@ contact-manager-app/
 ├── server.js
 ├── package.json
 └── README.md
+
+---
+
 🌐 API Endpoints
+
 🔐 User Auth Routes
-Method	Endpoint	Description
+
+Method	Endpoint	Description--->
 POST	/api/users/register	Register user
 POST	/api/users/login	Login user
 GET	/api/users/current	Get current user (protected)
 
 📇 Contact Routes (Protected)
-Method	Endpoint	Description
+
+Method	Endpoint	Description--->
 GET	/api/contacts	Get all contacts
 POST	/api/contacts	Create new contact
 GET	/api/contacts/:id	Get contact by ID
 PUT	/api/contacts/:id	Update contact
 DELETE	/api/contacts/:id	Delete contact
 
-🔐 Authentication Header (Required for Protected Routes)
+🔐 Authentication Header (Required for Protected Routes)--->
 Add the following header to all protected routes after login:
-
-makefile
-Copy
-Edit
 Authorization: Bearer <your_access_token>
-🛑 .gitignore
-Make sure your project has a .gitignore file with the following contents to avoid pushing sensitive/local files:
 
-lua
-Copy
-Edit
+🛑 .gitignore
+Make sure your project has a .gitignore file with the following contents to avoid pushing sensitive/local files
 node_modules/
 .env
 *.log
 npm-debug.log*
+
 👤 Author
-Name: Rohit Soni
-
+Name: Rohit Seth
 College: NIT Raipur
-
 Branch: Electronics and Communication Engineering (ECE)
-
-Year: 3rd Year
+Year: 4th Year
 
 Tech Stack: MERN Stack Developer
 
