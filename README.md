@@ -25,47 +25,63 @@ This is a RESTful API built with **Node.js**, **Express**, and **MongoDB** for m
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/contact-manager-app.git
-   cd contact-manager-app
-Install dependencies
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/contact-manager-app.git
+cd contact-manager-app
 
-bash
-Copy
-Edit
+# 2. Install dependencies
 npm install
-Configure environment variables
-Create a .env file in the root directory:
 
-ini
-Copy
-Edit
+# 3. Create a .env file in the root directory and add:
 PORT=5000
 CONNECTION_STRING=your_mongodb_connection_uri
-ACCESS_TOKEN_SECRET=your_secret_key
-Run the server
+ACCESS_TOKEN_SECRET=your_jwt_secret_key
 
-Development:
-
-bash
-Copy
-Edit
+# 4. Start the development server
 npm run dev
-Production:
 
-bash
+# For production build
+npm start
+
+📁 Project Structure
+lua
 Copy
 Edit
-npm start
-📬 API Endpoints
-🔐 Auth Routes
+contact-manager-app/
+│
+├── controllers/
+│   ├── contactController.js
+│   └── userController.js
+│
+├── models/
+│   ├── contactModel.js
+│   └── userModel.js
+│
+├── routes/
+│   ├── contactRoutes.js
+│   └── userRoutes.js
+│
+├── middleware/
+│   ├── errorHandler.js
+│   └── validateTokenHandler.js
+│
+├── config/
+│   └── dbConnection.js
+│
+├── .env
+├── .gitignore
+├── server.js
+├── package.json
+└── README.md
+🌐 API Endpoints
+🔐 User Auth Routes
 Method	Endpoint	Description
 POST	/api/users/register	Register user
 POST	/api/users/login	Login user
-GET	/api/users/current	Get current user
+GET	/api/users/current	Get current user (protected)
 
 📇 Contact Routes (Protected)
 Method	Endpoint	Description
@@ -75,16 +91,34 @@ GET	/api/contacts/:id	Get contact by ID
 PUT	/api/contacts/:id	Update contact
 DELETE	/api/contacts/:id	Delete contact
 
-🔐 Auth Header
-For all protected routes, include the JWT token in headers:
+🔐 Authentication Header (Required for Protected Routes)
+Add the following header to all protected routes after login:
 
 makefile
 Copy
 Edit
 Authorization: Bearer <your_access_token>
+🛑 .gitignore
+Make sure your project has a .gitignore file with the following contents to avoid pushing sensitive/local files:
+
+lua
+Copy
+Edit
+node_modules/
+.env
+*.log
+npm-debug.log*
 👤 Author
 Name: Rohit Soni
 
 College: NIT Raipur
 
-Branch: Electronics and Communication Engineering
+Branch: Electronics and Communication Engineering (ECE)
+
+Year: 3rd Year
+
+Tech Stack: MERN Stack Developer
+
+vbnet
+Copy
+Edit
